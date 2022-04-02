@@ -3,3 +3,4 @@ AzureInfrastructure/.terraform/providers/registry.terraform.io/hashicorp/azurerm
 *.tfstate
 *.tfstate.backup
 .vscode/c_cpp_properties.json
+ArduinoHardware/MKR Wifi 1010/arduino_secrets.h
