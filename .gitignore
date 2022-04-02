@@ -2,3 +2,4 @@ AzureInfrastructure/.terraform/providers/registry.terraform.io/hashicorp/azurerm
 *.terraform.lock.hcl
 *.tfstate
 *.tfstate.backup
+.vscode/c_cpp_properties.json

@@ -1,0 +1,6 @@
+{
+    "port": "COM3",
+    "board": "arduino:samd:mkrwifi1010",
+    "sketch": "ArduinoHardware\\MKR Wifi 1010\\Azure_IoT_Hub_WiFi.ino",
+    "output": "ArduinoHardware/ArduinoOutput"
+}
