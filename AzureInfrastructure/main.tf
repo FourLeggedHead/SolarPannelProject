@@ -1,4 +1,4 @@
-# Create resource group
+# Creates resource group
 resource "azurerm_resource_group" "solarpanel_rg" {
   name = "SOLAR-PANEL-${upper(var.env)}-001-RG"
   location = "West Europe"
@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "solarpanel_rg" {
   }
 }
 
-# Create Storage Account
+# Creates Storage Account
 resource "azurerm_storage_account" "solarpanel_sa" {
   name = "solarpanel${lower(var.env)}001sa"
   resource_group_name = azurerm_resource_group.solarpanel_rg.name
@@ -20,19 +20,27 @@ resource "azurerm_storage_account" "solarpanel_sa" {
   }
 }
 
-# Create Container
+# Creates key vault
+module "solarpanel_kv" {
+  source = "./modules/keyvault"
+  env = var.env
+  loc = azurerm_resource_group.solarpanel_rg.location
+  rg = azurerm_resource_group.solarpanel_rg.name
+}
+
+# Creates Container
 resource "azurerm_storage_container" "solarpanel_sc" {
   name = "raw"
   storage_account_name = azurerm_storage_account.solarpanel_sa.name  
 }
 
-# Create IoT hub
+# Creates IoT hub
 resource "azurerm_iothub" "solarpanel_iot" {
   name = "SOLAR-PANEL-${upper(var.env)}-001-IOT"
   resource_group_name = azurerm_resource_group.solarpanel_rg.name
   location = azurerm_resource_group.solarpanel_rg.location
   sku {
-    name = "F1"
+    name = "S1"
     capacity = "1"
   }
 
