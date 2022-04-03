@@ -1,5 +1,0 @@
-{
-    "sketch": "Azure_IoT_Hub_WiFi.ino",
-    "port": "COM3",
-    "board": "arduino:samd:mkrwifi1010"
-}

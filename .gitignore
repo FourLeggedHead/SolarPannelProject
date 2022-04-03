@@ -1,6 +1,19 @@
-AzureInfrastructure/.terraform/providers/registry.terraform.io/hashicorp/azurerm/2.99.0/windows_386/terraform-provider-azurerm_v2.99.0_x5.exe
+# Ignore vscode env directory
+.vscode/
+
+# Ignore resources directory
+/AzureInfrastructure/.terraform
+
+# Ignore build directory
+/ArduinoHardware/ArduinoOutput
+
+# Ignore secrets
+ArduinoHardware/MKR Wifi 1010/arduino_secrets.h
+
+# Ignore Terraform files
 *.terraform.lock.hcl
 *.tfstate
 *.tfstate.backup
-.vscode/c_cpp_properties.json
-ArduinoHardware/MKR Wifi 1010/arduino_secrets.h
+
+# Ignore build files
+*.[oda]
