@@ -7,7 +7,7 @@
 			"connectionString": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
-					"referenceName": "AzureKeyVault1",
+					"referenceName": "AzureKeyVaultService",
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "DataFactoryBlobStorageAccess"
