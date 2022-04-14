@@ -1,0 +1,9 @@
+{
+	"name": "solarpaneldev001df",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4081d832-f2d3-426e-9799-3665e27ce786",
+		"tenantId": "486bfc78-af7a-462b-960a-babd6a5caca5"
+	}
+}
