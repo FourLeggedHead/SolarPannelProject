@@ -1,0 +1,49 @@
+{
+	"name": "Avro1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStorageService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Avro",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "SOLAR-PANEL-DEV-001-IOT/02",
+				"container": "raw"
+			}
+		},
+		"schema": {
+			"type": "record",
+			"name": "Microsoft.Azure.Devices.Message",
+			"fields": [
+				{
+					"name": "EnqueuedTimeUtc",
+					"type": "string"
+				},
+				{
+					"name": "Properties",
+					"type": {
+						"type": "map",
+						"values": "string"
+					}
+				},
+				{
+					"name": "SystemProperties",
+					"type": {
+						"type": "map",
+						"values": "string"
+					}
+				},
+				{
+					"name": "Body",
+					"type": [
+						"null",
+						"bytes"
+					]
+				}
+			]
+		}
+	}
+}
